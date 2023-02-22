@@ -1,23 +1,20 @@
 #include "main.h"
 
 /**
- * print_alphabetx10 : entry
- * Description: printing alphabet ten times
- * return: void 
+ * print_alphabet_x10 - Entry point
+ * Description: prints alphabetsx10
+ * Return: void
  */
 
 void print_alphabet_x10(void)
 {
-	int i;
-	char j;
+	char i;
+	int j;
 
-	for (i = 0; i < 10; i++)
+	for (j = 0; j < 10; j++)
 	{
-		for(j = 'a'; j <= 'z'; j++)
-		
-			_putchar(j);
-
+		for (i = 'a'; i <= 'z'; i++)
+			_putchar(i);
 		_putchar('\n');
 	}
 }
-
