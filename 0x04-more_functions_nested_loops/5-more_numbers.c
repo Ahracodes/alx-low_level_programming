@@ -2,6 +2,7 @@
 
 /**
  * more_numbers - prints 1 to 14
+ * 10 times.
  * return : void
  */
 
