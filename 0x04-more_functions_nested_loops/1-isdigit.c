@@ -3,7 +3,6 @@
 /**
  * _isdigit - to detect digits
  * @c: the input
- *
  * Return: 1 if input is a digit, 0 if otherwise.
  */
 
