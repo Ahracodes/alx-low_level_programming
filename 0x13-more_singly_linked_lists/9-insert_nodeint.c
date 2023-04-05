@@ -29,7 +29,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			tmpcopy = tmpcopy->next;
 		}
 		if (tmpcopy == NULL)
-			return (NULL)
+			return (NULL);
 	}
 
 	jd = malloc(sizeof(listint_t));
