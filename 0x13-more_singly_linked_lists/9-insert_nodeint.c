@@ -15,7 +15,7 @@
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *new, *tmpcopy;   /**declaration of variables*/
+	listint_t *jd, *tmpcopy;   /**declaration of variables*/
 	unsigned int x;
 
 	if (head == NULL)  /**first failure: head node is empty*/
@@ -24,26 +24,28 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (idx) /*condition: idx isn't refering to first*/
 	{
 		tmpcopy = *head;
-		for (x = 0; x < idx - 1 && tmpcopy != NULL; x++)
+		for (x = 0; x < idx - 1 && tmpcopy != NULL; x++) /**navigate trg indexes*/
 		{
 			tmpcopy = tmpcopy->next;
 		}
+		if (tmpcopy == NULL)
+			return (NULL)
 	}
 
-	new = malloc(sizeof(listint_t));
+	jd = malloc(sizeof(listint_t));
 
-	if (new == NULL)
+	if (jd == NULL) /** failure in case the new space is null */
 		return (NULL);
-	new->n = n;
+	jd->n = n;
 
 	if (idx == 0)
 	{
-		new->next = *head;
-		*head = new;
-		return (new);
+		jd->next = *head;
+		*head = jd;
+		return (jd);
 	}
-	new->next = tmpcopy->next;
-	tmpcopy->next = new;
-	return (new);
+	jd->next = tmpcopy->next;
+	tmpcopy->next = jd;
+	return (jd);
  /*condition: idx isn't refering to first*/
 }
