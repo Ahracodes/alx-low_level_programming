@@ -15,10 +15,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int opfl, rdfl, wrtfl; /*open, read, write results */
 	char *loc; /*pointer to written etxt location */
 
+	if (filename == NULL)
+		return (0);
+
 	loc = malloc(sizeof(char) * letters);
 	if (loc == NULL)
-		return (0);
-	if (filename == NULL)
 		return (0);
 
 	opfl = open(filename, O_RDONLY);/*opening file in read only mode */
@@ -44,5 +45,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
+	free(loc);
+	close(opfl);
 	return (wrtfl);
 }
