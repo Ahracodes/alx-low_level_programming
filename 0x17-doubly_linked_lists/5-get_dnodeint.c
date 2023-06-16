@@ -19,7 +19,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	if (index == 0) /* head is id = 0 */
 		return (head);
 
-	for (x = 0, x < index, x++) /* as long as x lower than id */
+	for (x = 0; x < index; x++) /* as long as x lower than id */
 	{
 		if (head->next == NULL) /* list shorter than id */
 			return (NULL);
